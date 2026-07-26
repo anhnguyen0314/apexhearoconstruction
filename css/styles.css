@@ -993,7 +993,87 @@ section {
   margin-bottom: var(--space-4);
 }
 
-/* ---------- 14. Misc ---------- */
+/* ---------- 14. Lightbox ---------- */
+.lightbox-trigger {
+  cursor: zoom-in;
+  transition: filter 0.15s ease;
+}
+
+.lightbox-trigger:hover,
+.lightbox-trigger:focus-visible {
+  filter: brightness(0.9);
+  outline: 2px solid var(--color-accent);
+  outline-offset: -2px;
+}
+
+.lightbox-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  background: rgba(38, 35, 32, 0.94);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-5);
+}
+
+.lightbox-overlay.open {
+  display: flex;
+}
+
+.lightbox-figure {
+  margin: 0;
+  max-width: 92vw;
+  max-height: 92vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.lightbox-image {
+  max-width: 92vw;
+  max-height: 82vh;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-md);
+}
+
+.lightbox-caption {
+  color: var(--color-warm-gray-100);
+  font-size: 0.9rem;
+  text-align: center;
+  max-width: 70ch;
+}
+
+.lightbox-close {
+  position: fixed;
+  top: var(--space-4);
+  right: var(--space-4);
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  border: 1px solid rgba(247, 243, 234, 0.4);
+  background: rgba(38, 35, 32, 0.6);
+  color: var(--color-white);
+  font-size: 1.5rem;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.lightbox-close:hover,
+.lightbox-close:focus-visible {
+  background: var(--color-accent);
+  border-color: var(--color-accent);
+}
+
+body.lightbox-active {
+  overflow: hidden;
+}
+
+/* ---------- 15. Misc ---------- */
 .eyebrow-list {
   display: flex;
   flex-wrap: wrap;
