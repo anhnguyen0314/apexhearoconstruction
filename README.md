@@ -25,12 +25,15 @@ no build step, no server-side code, no framework. Deployable to GitHub Pages as-
     ├── team/               Founder/crew photos
     └── services/
         └── {service-slug}/
-            ├── 01.svg ... 06.svg      Gallery photos
-            └── before-after/          Before/after pair (remodels, kitchen-bath only)
+            └── 01.svg ... 06.svg      Gallery photos (click any to open the lightbox)
 ```
 
-Service slugs used under `images/services/`: `remodels`, `kitchen-bath`, `new-builds`,
-`adus`, `additions`, `decks`, `repairs`.
+Service slugs used under `images/services/`: `kitchen`, `bathroom`, `bedroom`, `adus`, `decks`.
+
+Clicking a gallery photo opens a lightbox with next/prev navigation between the
+photos in that same gallery (`js/lightbox.js`, included on `services.html`). It's a
+progressive enhancement that scans for `.gallery-grid` images automatically, so no
+markup changes are needed when you add or remove photos.
 
 ## Previewing locally
 
@@ -56,8 +59,6 @@ keep the same number of `<figure>` entries in `services.html`, or add/remove
 `<figure>` blocks to match how many photos you have for that service.
 
 - Gallery images: `images/services/{slug}/01.svg` .. `06.svg`
-- Before/after pairs (currently only on Remodels and Kitchen & Bath):
-  `images/services/{slug}/before-after/before-1.svg` and `after-1.svg`
 - Hero image: `images/hero/hero-home.svg` (used on the home page)
 - Page banner image: `images/hero/hero-banner.svg` (used on Services/About/Testimonials/Contact)
 - Team photos: `images/team/founder.svg`, `images/team/crew.svg`

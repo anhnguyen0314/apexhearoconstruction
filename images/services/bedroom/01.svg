@@ -1,5 +1,5 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="800" height="600" viewBox="0 0 800 600" role="img" aria-label="New Builds">
-  <rect width="100%" height="100%" fill="#5c534a"/>
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="600" viewBox="0 0 800 600" role="img" aria-label="Bedroom Remodels">
+  <rect width="100%" height="100%" fill="#8b8177"/>
   <rect width="100%" height="100%" fill="url(#diag)"/>
   <defs>
     <pattern id="diag" width="28" height="28" patternTransform="rotate(45)" patternUnits="userSpaceOnUse">
@@ -7,7 +7,7 @@
     </pattern>
   </defs>
   <text x="50%" y="50%" font-family="Helvetica, Arial, sans-serif" font-size="36" font-weight="700"
-        fill="#f7f3ea" text-anchor="middle" dominant-baseline="middle" letter-spacing="1">New Builds</text>
+        fill="#f7f3ea" text-anchor="middle" dominant-baseline="middle" letter-spacing="1">Bedroom Remodels</text>
   <text x="50%" y="332.4" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#f7f3ea" fill-opacity="0.75" text-anchor="middle">Project photo 1 of 6</text>
   <rect x="0" y="590" width="800" height="10" fill="#b5502d"/>
 </svg>

@@ -512,7 +512,7 @@ section {
 }
 
 @media (min-width: 980px) {
-  .card-grid--services { grid-template-columns: repeat(4, 1fr); }
+  .card-grid--services { grid-template-columns: repeat(3, 1fr); }
   .card-grid--testimonials { grid-template-columns: repeat(3, 1fr); }
 }
 
@@ -673,43 +673,6 @@ section {
   width: 100%;
   height: 100%;
   object-fit: cover;
-}
-
-/* Before / after layout */
-.before-after {
-  display: grid;
-  gap: var(--space-2);
-  grid-template-columns: 1fr 1fr;
-  margin-top: var(--space-4);
-  max-width: 720px;
-}
-
-.before-after figure {
-  margin: 0;
-  position: relative;
-  border-radius: var(--radius);
-  overflow: hidden;
-  aspect-ratio: 4 / 3;
-}
-
-.before-after img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.before-after figcaption {
-  position: absolute;
-  top: var(--space-2);
-  left: var(--space-2);
-  background: rgba(38, 35, 32, 0.8);
-  color: var(--color-white);
-  font-size: 0.75rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
-  padding: 0.25rem 0.6rem;
-  border-radius: var(--radius);
 }
 
 /* ---------- 9. Forms ---------- */
@@ -1067,6 +1030,58 @@ section {
 .lightbox-close:focus-visible {
   background: var(--color-accent);
   border-color: var(--color-accent);
+}
+
+.lightbox-nav {
+  position: fixed;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  border: 1px solid rgba(247, 243, 234, 0.4);
+  background: rgba(38, 35, 32, 0.6);
+  color: var(--color-white);
+  font-size: 2rem;
+  line-height: 1;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.lightbox-nav:hover,
+.lightbox-nav:focus-visible {
+  background: var(--color-accent);
+  border-color: var(--color-accent);
+}
+
+.lightbox-nav[hidden] {
+  display: none;
+}
+
+.lightbox-prev {
+  left: var(--space-4);
+}
+
+.lightbox-next {
+  right: var(--space-4);
+}
+
+@media (max-width: 640px) {
+  .lightbox-nav {
+    width: 44px;
+    height: 44px;
+    font-size: 1.6rem;
+  }
+
+  .lightbox-prev {
+    left: var(--space-2);
+  }
+
+  .lightbox-next {
+    right: var(--space-2);
+  }
 }
 
 body.lightbox-active {
