@@ -21,6 +21,10 @@
   --color-accent-dark: #8f3d20;
   --color-accent-light: #e2c9a6;
 
+  /* Brand mark colors, from the official logo — used for the logo only */
+  --color-brand-red: #ec3013;
+  --color-brand-red-on-dark: #ff9783;
+
   --color-success: #4a6b4d;
   --color-border: var(--color-warm-gray-300);
 
@@ -279,7 +283,11 @@ section {
 
 .logo-mark {
   flex-shrink: 0;
-  color: var(--color-accent);
+  color: var(--color-brand-red);
+}
+
+.logo-accent {
+  color: var(--color-brand-red);
 }
 
 .logo-text-sub {
@@ -873,6 +881,10 @@ section {
 
 .footer-brand .logo {
   color: var(--color-white);
+}
+
+.footer-brand .logo-accent {
+  color: var(--color-brand-red-on-dark);
 }
 
 .footer-brand p {
