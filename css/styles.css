@@ -422,6 +422,7 @@ section {
   .nav-cta {
     flex-direction: row;
     align-items: center;
+    gap: var(--space-4);
   }
 }
 
@@ -783,20 +784,6 @@ section {
   color: var(--color-accent-dark);
   flex-shrink: 0;
   margin-top: 3px;
-}
-
-.map-embed {
-  margin-top: var(--space-4);
-  border: 1px dashed var(--color-warm-gray-500);
-  border-radius: var(--radius);
-  background: var(--color-warm-gray-100);
-  aspect-ratio: 16 / 10;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  color: var(--color-warm-gray-500);
-  padding: var(--space-3);
 }
 
 /* ---------- 11. About page ---------- */

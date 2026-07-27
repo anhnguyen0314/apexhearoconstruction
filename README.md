@@ -11,7 +11,7 @@ no build step, no server-side code, no framework. Deployable to GitHub Pages as-
 ├── services.html         All services, one page with anchored sections
 ├── testimonials.html     Full testimonials grid (data-driven)
 ├── about.html             Company story, team, licensing, service area
-├── contact.html           Contact form (Brevo stub) + contact info + map placeholder
+├── contact.html           Contact form (Brevo stub) + contact info
 ├── CNAME                  Custom domain for GitHub Pages
 ├── css/
 │   └── styles.css        Single stylesheet (design tokens + components + layout)
@@ -114,18 +114,17 @@ To connect it:
    embed code in its place. Leave the surrounding `<div id="brevo-form-container">`
    in place so page spacing still applies.
 
-### 5. Update business info (phone, email, service area, license #)
+### 5. Update business info (phone, service area, license #)
 
-These are currently placeholders repeated in the header/footer of every page and in
+These are currently repeated in the header/footer of every page and in
 `contact.html`/`about.html`:
-- Phone: `(555) 123-4567` (appears as both display text and `tel:+15551234567` links)
-- Email: `info@apexhearoconstruction.com`
-- Service area: "Willow Creek & surrounding counties"
-- License #: `PLACEHOLDER-000000`
+- Phone: `(714) 232-6699` (appears as both display text and `tel:+17142326699` links)
+- Service area: "Orange County & neighboring cities"
+- License #: `PLACEHOLDER-000000` — still needs a real license number
 
-Find-and-replace these strings across the `.html` files. Also update the Google Maps
-embed placeholder in `contact.html` (`<div class="map-embed">`) with a real
-`<iframe>` from Google Maps → Share → Embed a map.
+Find-and-replace these strings across the `.html` files. There is no business email
+or map embed on the site by design — the Contact page form is the only contact
+channel besides phone.
 
 ### 6. Company story / about page copy
 
