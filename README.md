@@ -61,7 +61,7 @@ keep the same number of `<figure>` entries in `services.html`, or add/remove
 - Gallery images: `images/services/{slug}/01.svg` .. `06.svg`
 - Hero image: `images/hero/hero-home.svg` (used on the home page)
 - Page banner image: `images/hero/hero-banner.svg` (used on Services/About/Testimonials/Contact)
-- Team photos: `images/team/founder.svg`, `images/team/crew.svg`
+- Team photos: `images/team/founder.svg`. The About page's crew-photo slot currently reuses the brand banner (`images/hero/hero-home.svg`) — swap in a real crew/jobsite photo when available.
 
 Keep photos reasonably compressed (a few hundred KB max) so the site stays fast.
 Update the `alt` text on each `<img>` in the HTML to describe the real photo.
