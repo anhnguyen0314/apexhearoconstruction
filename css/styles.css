@@ -508,6 +508,17 @@ section {
   margin-bottom: 0;
 }
 
+/* All hero/banner photos are composed with the subject on the right and
+   calm space on the left for the text. On narrow screens `cover` crops
+   in from both sides, which can land the crop mid-subject. Anchoring to
+   the left keeps the calm side in frame instead. */
+@media (max-width: 640px) {
+  .hero,
+  .page-banner {
+    background-position: left center;
+  }
+}
+
 /* ---------- 7. Cards ---------- */
 .card-grid {
   display: grid;
