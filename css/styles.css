@@ -16,12 +16,12 @@
   --color-off-white: #f7f3ea;
   --color-white: #fffdf9;
 
-  /* Accent — deep rust/terracotta */
-  --color-accent: #b5502d;
-  --color-accent-dark: #8f3d20;
-  --color-accent-light: #e2c9a6;
+  /* Accent — brand red, matching the official logo */
+  --color-accent: #ec3013;
+  --color-accent-dark: #aa230e;
+  --color-accent-light: #fbd1cb;
 
-  /* Brand mark colors, from the official logo — used for the logo only */
+  /* Brand mark colors, from the official logo */
   --color-brand-red: #ec3013;
   --color-brand-red-on-dark: #ff9783;
 
