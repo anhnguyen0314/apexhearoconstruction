@@ -1,44 +1,37 @@
 [
   {
-    "name": "Sarah M.",
+    "name": "Nina T.",
     "projectType": "Kitchen Remodel",
-    "location": "Willow Creek",
-    "quote": "Apex Hearo turned our cramped, outdated kitchen into the heart of the house. They kept us in the loop every step of the way and finished right on schedule.",
+    "location": "Westminster",
+    "quote": "Our galley kitchen felt stuck in the '90s. Apex Hearo reworked the layout, added an island, and kept the dust and noise to a minimum while we were still living in the house. We practically live in this kitchen now — it was worth every bit of the disruption.",
     "rating": 5
   },
   {
-    "name": "David & Priya R.",
-    "projectType": "Home Addition",
-    "location": "Fairview",
-    "quote": "We added a second story without moving out, and the crew treated our home like it was their own. Clean job sites, clear communication, zero surprises on the invoice.",
+    "name": "Agnes D.",
+    "projectType": "ADU",
+    "location": "Riverside",
+    "quote": "We wanted a backyard unit for my mother without a year of headaches. They handled the permitting, kept us updated every week, and the finished ADU is better built than our actual house. She moved in three weeks ahead of schedule.",
     "rating": 5
   },
   {
-    "name": "Marcus T.",
-    "projectType": "ADU Build",
-    "location": "Cedar Hills",
-    "quote": "From permits to the final walkthrough, the team made building our backyard ADU painless. It's now bringing in rental income and it looks better than the main house.",
-    "rating": 5
-  },
-  {
-    "name": "Linda G.",
+    "name": "Serafin P.",
     "projectType": "Bathroom Remodel",
-    "location": "Willow Creek",
-    "quote": "Professional, punctual, and honest about what things actually cost. Our new bathroom looks like it belongs in a magazine.",
+    "location": "Santa Ana",
+    "quote": "I got quotes from four contractors and Apex Hearo was the only one who gave me a straight answer on cost and timeline upfront — and stuck to both. The tile work in the shower is flawless.",
     "rating": 5
   },
   {
-    "name": "James O.",
-    "projectType": "Deck Build",
-    "location": "Northgate",
-    "quote": "The new deck is rock solid and exactly what we pictured. They walked us through material options without any upselling pressure.",
+    "name": "Nancy V.",
+    "projectType": "Kitchen Remodel",
+    "location": "Anaheim",
+    "quote": "They helped us pick finishes we never would've landed on ourselves, and the kitchen came out better than the photos I'd been saving for years. The crew showed up on time every single day, which after two bad contractor experiences was a huge relief.",
     "rating": 4
   },
   {
-    "name": "Angela F.",
-    "projectType": "Emergency Repair",
-    "location": "Fairview",
-    "quote": "Had a roof leak after a storm and they had a crew out within a day. Fixed it right the first time and explained exactly what caused it.",
+    "name": "Mui T.",
+    "projectType": "ADU",
+    "location": "Westminster",
+    "quote": "They built us a detached ADU for my in-laws and treated it with the same care as a custom home — real insulation, real finishes, not just a shed with plumbing. Our neighbors keep asking who did the work.",
     "rating": 5
   }
 ]
