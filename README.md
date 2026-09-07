@@ -94,25 +94,23 @@ Edit `data/testimonials.json` only — the page JS renders it automatically on b
 
 `location` and `rating` are optional. No HTML or JS changes required.
 
-### 4. Connect the Brevo contact form
+### 4. The Brevo contact form
 
-`contact.html` ships with a working-looking placeholder form (it doesn't submit
-anywhere yet) inside a clearly marked block:
+`contact.html` is connected to a live Brevo form. The embed has three parts that
+travel together:
+- A `<style>` block in `<head>` (Brevo's fonts and form CSS resets)
+- The form markup itself, inside `<div id="brevo-form-container">`, marked with
+  `<!-- BREVO_FORM_EMBED:START -->` / `:END` comments
+- A `<script>` block just before `</body>` (Brevo's validation/submit JS) plus the
+  `sibforms.com/.../main.js` script tag
 
-```html
-<!-- BREVO_FORM_EMBED:START -->
-... placeholder form ...
-<!-- BREVO_FORM_EMBED:END -->
-```
+The confirmation page shown after a successful submit is `thank-you.html`
+(configured in Brevo under the form's "Confirmation page" setting), which reuses
+the site's header/footer and is marked `noindex` so it doesn't show up in search.
 
-To connect it:
-1. In Brevo, go to **Contacts → Forms**, build/style your form (Name, Email, Phone,
-   Project Type, Message fields to match the placeholder).
-2. Copy the embed code Brevo gives you.
-3. In `contact.html`, delete everything between `BREVO_FORM_EMBED:START` and
-   `BREVO_FORM_EMBED:END` (including the placeholder `<form>`) and paste Brevo's
-   embed code in its place. Leave the surrounding `<div id="brevo-form-container">`
-   in place so page spacing still applies.
+To edit the form's fields later, change it in Brevo (**Marketing → Forms**) and
+regenerate the embed code, then replace all three pieces above together — don't
+edit the field names/IDs by hand, since they're tied to how Brevo maps submissions.
 
 ### 5. Update business info (phone, service area, license #)
 
