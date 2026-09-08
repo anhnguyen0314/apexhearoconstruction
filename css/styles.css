@@ -17,13 +17,13 @@
   --color-white: #fffdf9;
 
   /* Accent — brand red, matching the official logo */
-  --color-accent: #ec3013;
-  --color-accent-dark: #aa230e;
-  --color-accent-light: #fbd1cb;
+  --color-accent: #a72b21;
+  --color-accent-dark: #781f18;
+  --color-accent-light: #fbcfcb;
 
   /* Brand mark colors, from the official logo */
-  --color-brand-red: #ec3013;
-  --color-brand-red-on-dark: #ff9783;
+  --color-brand-red: #a72b21;
+  --color-brand-red-on-dark: #eb9e97;
 
   --color-success: #4a6b4d;
   --color-border: var(--color-warm-gray-300);
