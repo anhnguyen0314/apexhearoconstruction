@@ -28,7 +28,7 @@ no build step, no server-side code, no framework. Deployable to GitHub Pages as-
             └── 01.svg ... 06.svg      Gallery photos (click any to open the lightbox)
 ```
 
-Service slugs used under `images/services/`: `kitchen`, `bathroom`, `bedroom`, `adus`, `decks`.
+Service slugs used under `images/services/`: `kitchen`, `bathroom`, `bedroom`, `adus`, `decks`, `living-room`.
 
 Clicking a gallery photo opens a lightbox with next/prev navigation between the
 photos in that same gallery (`js/lightbox.js`, included on `services.html`). It's a
@@ -75,7 +75,6 @@ and add a link to it in:
 - the home page service cards (`index.html`)
 - the "jump to service" list at the top of `services.html`
 - the footer "Services" column (every page)
-- the Project Type dropdown on `contact.html`
 
 ### 3. Add or edit testimonials
 
