@@ -111,17 +111,19 @@ To edit the form's fields later, change it in Brevo (**Marketing → Forms**) an
 regenerate the embed code, then replace all three pieces above together — don't
 edit the field names/IDs by hand, since they're tied to how Brevo maps submissions.
 
-### 5. Update business info (phone, service area, license #)
+### 5. Update business info (phone, email, service area, license #)
 
 These are currently repeated in the header/footer of every page and in
 `contact.html`/`about.html`:
 - Phone: `(714) 232-6699` (appears as both display text and `tel:+17142326699` links)
+- Email: `info@apexhearo.com` (appears as both display text and `mailto:` links, in
+  the footer of every page and the Contact page's Contact Info card)
 - Service area: "Orange County & neighboring cities"
-- License #: `PLACEHOLDER-000000` — still needs a real license number
+- License #: `1160526`
 
-Find-and-replace these strings across the `.html` files. There is no business email
-or map embed on the site by design — the Contact page form is the only contact
-channel besides phone.
+Find-and-replace these strings across the `.html` files. There is no map embed on
+the site by design — the Contact page form, phone, and email are the contact
+channels.
 
 ### 6. Company story / about page copy
 
