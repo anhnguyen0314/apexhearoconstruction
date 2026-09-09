@@ -839,26 +839,13 @@ section {
 }
 
 .contractor-card {
-  display: grid;
-  gap: var(--space-5);
-  align-items: start;
-  margin-top: var(--space-5);
-}
-
-@media (min-width: 860px) {
-  .contractor-card { grid-template-columns: 1fr 1.3fr; }
-}
-
-.contractor-photo {
   background: var(--color-white);
   border: 1px solid var(--color-border);
   border-radius: var(--radius);
-  padding: var(--space-4);
-}
-
-.contractor-photo img {
-  width: 100%;
-  border-radius: var(--radius);
+  padding: var(--space-5);
+  margin-inline: auto;
+  margin-top: var(--space-5);
+  max-width: 760px;
 }
 
 .contractor-name {
