@@ -30,6 +30,12 @@ no build step, no server-side code, no framework. Deployable to GitHub Pages as-
 
 Service slugs used under `images/services/`: `kitchen`, `bathroom`, `bedroom`, `adus`, `decks`, `living-room`.
 
+Every page links the stylesheet as `css/styles.css?v=N` instead of a bare path. Browsers
+(and GitHub Pages' CDN) cache CSS aggressively, so editing `styles.css` without changing
+the URL means visitors can keep seeing the old styles for a while after you deploy. **Any
+time you edit `css/styles.css`, bump the `?v=N` number on every page that links it** so
+visitors reliably get the new file.
+
 Clicking a gallery photo opens a lightbox with next/prev navigation between the
 photos in that same gallery (`js/lightbox.js`, included on `services.html`). It's a
 progressive enhancement that scans for `.gallery-grid` images automatically, so no
