@@ -638,6 +638,38 @@ section {
   grid-column: 1 / -1;
 }
 
+/* Below the 640px breakpoint where .card-grid is a single column, let the
+   testimonials scroll horizontally as a swipeable carousel instead of a
+   tall vertical stack — this keeps mobile usable no matter how many
+   testimonials get added to data/testimonials.json. */
+@media (max-width: 639px) {
+  .card-grid--testimonials {
+    display: flex;
+    grid-template-columns: none;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-padding-inline: var(--space-2);
+    -webkit-overflow-scrolling: touch;
+    padding-bottom: var(--space-2);
+    margin-inline: calc(var(--space-4) * -1);
+    padding-inline: var(--space-4);
+  }
+
+  .card-grid--testimonials::-webkit-scrollbar {
+    display: none;
+  }
+
+  .card-grid--testimonials .testimonial-card {
+    flex: 0 0 85%;
+    scroll-snap-align: start;
+  }
+
+  .card-grid--testimonials .testimonials-loading,
+  .card-grid--testimonials .testimonials-error {
+    flex: 0 0 100%;
+  }
+}
+
 /* ---------- 8. Service sections & gallery ---------- */
 .service-section {
   padding-block: var(--space-6);
