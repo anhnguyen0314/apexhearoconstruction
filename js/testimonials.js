@@ -79,6 +79,30 @@
     });
   }
 
+  function appendCards(container, items) {
+    items.forEach(function (item) {
+      container.appendChild(renderCard(item));
+    });
+  }
+
+  function addShowMoreButton(container, remainingItems) {
+    var wrap = document.createElement("p");
+    wrap.className = "text-center testimonials-more-wrap";
+
+    var button = document.createElement("button");
+    button.type = "button";
+    button.className = "btn btn-dark";
+    button.textContent = "Show More Reviews (" + remainingItems.length + ")";
+
+    button.addEventListener("click", function () {
+      appendCards(container, remainingItems);
+      wrap.remove();
+    });
+
+    wrap.appendChild(button);
+    container.insertAdjacentElement("afterend", wrap);
+  }
+
   function loadTestimonials() {
     var containers = document.querySelectorAll("[data-testimonials]");
     if (!containers.length) return;
@@ -95,6 +119,17 @@
           if (limitAttr) {
             items = data.slice(0, parseInt(limitAttr, 10));
           }
+
+          var initialAttr = container.getAttribute("data-testimonials-initial");
+          if (!limitAttr && initialAttr) {
+            var initialCount = parseInt(initialAttr, 10);
+            if (items.length > initialCount) {
+              renderInto(container, items.slice(0, initialCount));
+              addShowMoreButton(container, items.slice(initialCount));
+              return;
+            }
+          }
+
           renderInto(container, items);
         });
       })

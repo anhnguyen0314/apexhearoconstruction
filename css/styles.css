@@ -638,6 +638,10 @@ section {
   grid-column: 1 / -1;
 }
 
+.testimonials-more-wrap {
+  margin-top: var(--space-5);
+}
+
 /* Below the 640px breakpoint where .card-grid is a single column, let the
    testimonials scroll horizontally as a swipeable carousel instead of a
    tall vertical stack — this keeps mobile usable no matter how many
@@ -725,6 +729,10 @@ section {
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+
+.gallery-more-wrap {
+  margin-top: var(--space-4);
 }
 
 /* ---------- 9. Forms ---------- */
