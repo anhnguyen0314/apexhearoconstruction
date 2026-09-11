@@ -79,24 +79,43 @@
     });
   }
 
-  function appendCards(container, items) {
-    items.forEach(function (item) {
-      container.appendChild(renderCard(item));
+  function addShowMoreToggle(container, initialCount) {
+    var cards = Array.prototype.slice.call(container.children).filter(function (el) {
+      return el.classList.contains("testimonial-card");
     });
-  }
+    var extraCards = cards.slice(initialCount);
+    if (!extraCards.length) return;
 
-  function addShowMoreButton(container, remainingItems) {
+    var expanded = false;
+    extraCards.forEach(function (card) {
+      card.hidden = true;
+    });
+
     var wrap = document.createElement("p");
     wrap.className = "text-center testimonials-more-wrap";
 
     var button = document.createElement("button");
     button.type = "button";
     button.className = "btn btn-dark";
-    button.textContent = "Show More Reviews (" + remainingItems.length + ")";
+
+    function setLabel() {
+      button.textContent = expanded ? "Show Fewer Reviews" : "Show More Reviews (" + extraCards.length + ")";
+    }
+    setLabel();
 
     button.addEventListener("click", function () {
-      appendCards(container, remainingItems);
-      wrap.remove();
+      expanded = !expanded;
+      extraCards.forEach(function (card) {
+        card.hidden = !expanded;
+      });
+      setLabel();
+      if (expanded) {
+        // Bring the newly revealed card into view — matters most on the
+        // mobile carousel, where new cards land off-screen to the right.
+        extraCards[0].scrollIntoView({ behavior: "smooth", inline: "start", block: "nearest" });
+      } else {
+        container.scrollIntoView({ behavior: "smooth", block: "nearest" });
+      }
     });
 
     wrap.appendChild(button);
@@ -120,17 +139,15 @@
             items = data.slice(0, parseInt(limitAttr, 10));
           }
 
+          renderInto(container, items);
+
           var initialAttr = container.getAttribute("data-testimonials-initial");
           if (!limitAttr && initialAttr) {
             var initialCount = parseInt(initialAttr, 10);
             if (items.length > initialCount) {
-              renderInto(container, items.slice(0, initialCount));
-              addShowMoreButton(container, items.slice(initialCount));
-              return;
+              addShowMoreToggle(container, initialCount);
             }
           }
-
-          renderInto(container, items);
         });
       })
       .catch(function (err) {

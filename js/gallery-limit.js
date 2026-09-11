@@ -1,7 +1,7 @@
 // Progressive enhancement: caps each service gallery to 6 photos on load
-// and adds a "See Full Gallery" button to reveal the rest. Hidden photos
-// stay in the DOM (just [hidden]), so lightbox.js can still navigate to
-// them via next/prev once the gallery is expanded.
+// and adds a toggle button to show the rest (and collapse back). Hidden
+// photos stay in the DOM (just [hidden]), so lightbox.js can still
+// navigate to them via next/prev once the gallery is expanded.
 (function () {
   "use strict";
 
@@ -14,8 +14,9 @@
 
     if (figures.length <= VISIBLE_COUNT) return;
 
-    var hiddenFigures = figures.slice(VISIBLE_COUNT);
-    hiddenFigures.forEach(function (figure) {
+    var extraFigures = figures.slice(VISIBLE_COUNT);
+    var expanded = false;
+    extraFigures.forEach(function (figure) {
       figure.hidden = true;
     });
 
@@ -25,13 +26,21 @@
     var button = document.createElement("button");
     button.type = "button";
     button.className = "btn btn-dark";
-    button.textContent = "See Full Gallery (" + figures.length + " Photos)";
+
+    function setLabel() {
+      button.textContent = expanded ? "Show Fewer Photos" : "See Full Gallery (" + figures.length + " Photos)";
+    }
+    setLabel();
 
     button.addEventListener("click", function () {
-      hiddenFigures.forEach(function (figure) {
-        figure.hidden = false;
+      expanded = !expanded;
+      extraFigures.forEach(function (figure) {
+        figure.hidden = !expanded;
       });
-      wrap.remove();
+      setLabel();
+      if (!expanded) {
+        grid.scrollIntoView({ behavior: "smooth", block: "nearest" });
+      }
     });
 
     wrap.appendChild(button);
